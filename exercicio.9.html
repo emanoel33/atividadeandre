@@ -1,0 +1,19 @@
+<script>
+    # Inicializando variáveis para armazenar o maior e o menor valor
+maior_valor = float('-inf')  # Inicializando com o menor valor possível
+menor_valor = float('inf')   # Inicializando com o maior valor possível
+
+# Loop para ler os 50 valores
+for i in range(50):
+    valor = float(input("Digite o valor {}/50: ".format(i+1)))
+    
+    # Atualizando o maior e o menor valor, se necessário
+    if valor > maior_valor:
+        maior_valor = valor
+    if valor < menor_valor:
+        menor_valor = valor
+
+# Mostrando o resultado
+print("O maior valor é:", maior_valor)
+print("O menor valor é:", menor_valor)
+</script>

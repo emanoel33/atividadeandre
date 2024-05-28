@@ -1,0 +1,22 @@
+<script>
+# Função para calcular a soma dos inteiros consecutivos a partir de m
+def calcular_soma_consecutivos(m, n):
+    soma = 0
+    for i in range(m, m + n):
+        soma += i
+    return soma
+
+# Loop para ler os pares de valores m, n e calcular a soma dos inteiros consecutivos
+while True:
+    m = int(input("Digite o valor de m (ou um número negativo para encerrar): "))
+    
+    # Verificar se o loop deve ser encerrado
+    if m < 0:
+        break
+    
+    n = int(input("Digite o valor de n: "))
+    
+    # Calcular e escrever a soma dos inteiros consecutivos a partir de m
+    soma = calcular_soma_consecutivos(m, n)
+    print("A soma dos", n, "inteiros consecutivos a partir de", m, "é:", soma)    
+</script>

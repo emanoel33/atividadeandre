@@ -1,0 +1,17 @@
+<script>
+    altura_chico = 1.50  # metros
+altura_ze = 1.10    # metros
+crescimento_chico = 0.02  # metros por ano
+crescimento_ze = 0.03     # metros por ano
+anos = 0
+
+# Enquanto a altura de Zé for menor ou igual à altura de Chico
+while altura_ze <= altura_chico:
+    # Incrementar a altura de cada pessoa
+    altura_chico += crescimento_chico
+    altura_ze += crescimento_ze
+    anos += 1
+
+# Imprimir o resultado
+print("Serão necessários", anos, "anos para que Zé seja maior que Chico.")
+</script>

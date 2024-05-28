@@ -1,0 +1,38 @@
+<script>
+    # Inicializando variáveis
+soma_precos_com_aumento = 0
+soma_precos_sem_aumento = 0
+quantidade_produtos = 0
+
+# Loop para entrada dos dados dos produtos
+while True:
+    codigo_produto = int(input("Digite o código do produto (ou um valor negativo para encerrar): "))
+    if codigo_produto < 0:
+        break
+    
+    preco_custo = float(input("Digite o preço de custo do produto: "))
+    
+    # Calculando o novo preço com aumento de 20%
+    preco_novo = preco_custo * 1.20
+    
+    # Somando os preços para cálculo das médias
+    soma_precos_com_aumento += preco_novo
+    soma_precos_sem_aumento += preco_custo
+    quantidade_produtos += 1
+    
+    # Exibindo o código e o preço novo do produto
+    print("Código do produto:", codigo_produto)
+    print("Novo preço do produto:", preco_novo)
+
+# Verificando se foram inseridos produtos
+if quantidade_produtos > 0:
+    # Calculando as médias
+    media_precos_com_aumento = soma_precos_com_aumento / quantidade_produtos
+    media_precos_sem_aumento = soma_precos_sem_aumento / quantidade_produtos
+
+    # Exibindo as médias
+    print("Média dos preços com aumento:", media_precos_com_aumento)
+    print("Média dos preços sem aumento:", media_precos_sem_aumento)
+else:
+    print("Nenhum produto inserido.")
+</script>

@@ -1,0 +1,33 @@
+<script>
+ soma = 0
+contador_positivos = 0
+contador_negativos = 0
+
+while True:
+    valor = float(input("Digite um valor (ou 0 para encerrar): "))
+    
+    if valor == 0:
+        break
+    
+    soma += valor
+    
+    if valor > 0:
+        contador_positivos += 1
+    elif valor < 0:
+        contador_negativos += 1
+
+total_valores = contador_positivos + contador_negativos
+
+if total_valores > 0:
+    media = soma / total_valores
+    percentual_positivos = (contador_positivos / total_valores) * 100
+    percentual_negativos = (contador_negativos / total_valores) * 100
+    
+    print("\nMédia aritmética dos valores lidos:", media)
+    print("Quantidade de valores positivos:", contador_positivos)
+    print("Quantidade de valores negativos:", contador_negativos)
+    print("Percentual de valores positivos:", percentual_positivos, "%")
+    print("Percentual de valores negativos:", percentual_negativos, "%")
+else:
+    print("\nNenhum valor foi inserido.")   
+</script>

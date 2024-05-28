@@ -1,0 +1,32 @@
+<script>
+# Inicializando contadores para cada intervalo
+intervalo_1 = 0
+intervalo_2 = 0
+intervalo_3 = 0
+intervalo_4 = 0
+
+# Loop para ler os números e contar quantos estão em cada intervalo
+while True:
+    numero = float(input("Digite um número (ou um número negativo para encerrar): "))
+    
+    # Verificar se o loop deve ser encerrado
+    if numero < 0:
+        break
+    
+    # Verificar em qual intervalo o número se encontra e incrementar o contador correspondente
+    if numero >= 0 and numero <= 25:
+        intervalo_1 += 1
+    elif numero >= 26 and numero <= 50:
+        intervalo_2 += 1
+    elif numero >= 51 and numero <= 75:
+        intervalo_3 += 1
+    elif numero >= 76 and numero <= 100:
+        intervalo_4 += 1
+
+# Imprimir os resultados
+print("\nQuantidade de números nos intervalos:")
+print("[0,25]:", intervalo_1)
+print("[26,50]:", intervalo_2)
+print("[51,75]:", intervalo_3)
+print("[76,100]:", intervalo_4)
+</script>

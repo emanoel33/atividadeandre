@@ -1,0 +1,24 @@
+<script>
+    soma = 0
+contador = 0
+
+# Loop para ler os valores e calcular a soma
+while True:
+    valor = int(input("Digite um valor inteiro positivo (digite um valor negativo para terminar): "))
+    
+    # Verificar se o loop deve ser encerrado
+    if valor < 0:
+        break
+    
+    # Atualizar a soma e o contador
+    soma += valor
+    contador += 1
+
+# Verificar se pelo menos um valor foi inserido
+if contador > 0:
+    # Calcular a média aritmética
+    media = soma / contador
+    print("A média aritmética dos valores inseridos é:", media)
+else:
+    print("Nenhum valor positivo foi inserido.")
+</script>

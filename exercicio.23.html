@@ -1,0 +1,41 @@
+<script>
+    # Inicializando variáveis para contagem
+total_habitantes = 0
+maior_idade = 0
+contagem_mulheres_18_35_olhos_verdes_cabelos_louros = 0
+
+# Loop para entrada dos dados dos habitantes
+while True:
+    sexo = input("Digite o sexo do habitante (M/F): ")
+    if sexo.lower() not in ['m', 'f']:
+        print("Por favor, digite 'M' para masculino ou 'F' para feminino.")
+        continue
+    
+    cor_olhos = input("Digite a cor dos olhos do habitante (azuis, verdes ou castanhos): ")
+    if cor_olhos.lower() not in ['azuis', 'verdes', 'castanhos']:
+        print("Por favor, digite 'azuis', 'verdes' ou 'castanhos' para a cor dos olhos.")
+        continue
+    
+    cor_cabelos = input("Digite a cor dos cabelos do habitante (louros, castanhos, pretos): ")
+    if cor_cabelos.lower() not in ['louros', 'castanhos', 'pretos']:
+        print("Por favor, digite 'louros', 'castanhos' ou 'pretos' para a cor dos cabelos.")
+        continue
+    
+    idade = int(input("Digite a idade do habitante (ou um valor negativo para encerrar): "))
+    if idade < 0:
+        break
+    
+    # Atualizando a maior idade
+    if idade > maior_idade:
+        maior_idade = idade
+    
+    # Contando mulheres com idade entre 18 e 35 anos, olhos verdes e cabelos louros
+    if sexo.lower() == 'f' and 18 <= idade <= 35 and cor_olhos.lower() == 'verdes' and cor_cabelos.lower() == 'louros':
+        contagem_mulheres_18_35_olhos_verdes_cabelos_louros += 1
+    
+    total_habitantes += 1
+
+# Exibindo resultados
+print("Maior idade dos habitantes:", maior_idade)
+print("Quantidade de mulheres com idade entre 18 e 35 anos, olhos verdes e cabelos louros:", contagem_mulheres_18_35_olhos_verdes_cabelos_louros)
+</script>

@@ -1,0 +1,31 @@
+<script>
+    import math
+
+# Função para imprimir o cabeçalho da tabela
+def imprimir_cabecalho():
+    print("\n{:<10}{:<10}{:<10}{:<10}".format("Valor", "Quadrado", "Cubo", "Raiz Quadrada"))
+
+# Função para imprimir uma linha da tabela
+def imprimir_linha(valor):
+    quadrado = valor ** 2
+    cubo = valor ** 3
+    raiz_quadrada = math.sqrt(valor)
+    print("{:<10.2f}{:<10.2f}{:<10.2f}{:<10.2f}".format(valor, quadrado, cubo, raiz_quadrada))
+
+# Contador para controlar a impressão do cabeçalho a cada 20 linhas
+contador_linhas = 0
+
+# Loop para ler os valores e imprimir a tabela
+while True:
+    valor = float(input("Digite um valor (ou 0 para encerrar): "))
+    
+    if valor == 0:
+        break
+    
+    # Se o contador de linhas for múltiplo de 20, imprimir o cabeçalho
+    if contador_linhas % 20 == 0:
+        imprimir_cabecalho()
+    
+    imprimir_linha(valor)
+    contador_linhas += 1 
+</script>

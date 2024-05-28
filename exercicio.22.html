@@ -1,0 +1,44 @@
+<script>
+    # Inicializando variáveis
+soma_salarios = 0
+quantidade_habitantes = 0
+maior_idade = float('-inf')
+menor_idade = float('inf')
+quantidade_mulheres_salario_ate_100 = 0
+
+# Loop para entrada dos dados dos habitantes
+while True:
+    idade = int(input("Digite a idade do habitante (ou um valor negativo para encerrar): "))
+    if idade < 0:
+        break
+    
+    sexo = input("Digite o sexo do habitante (M/F): ")
+    salario = float(input("Digite o salário do habitante: "))
+    
+    # Atualizando maior e menor idade do grupo
+    if idade > maior_idade:
+        maior_idade = idade
+    if idade < menor_idade:
+        menor_idade = idade
+    
+    # Verificando se é mulher com salário até R$100,00
+    if sexo == 'F' and salario <= 100:
+        quantidade_mulheres_salario_ate_100 += 1
+    
+    # Somando os salários para cálculo da média
+    soma_salarios += salario
+    quantidade_habitantes += 1
+
+# Verificando se foram inseridos habitantes
+if quantidade_habitantes > 0:
+    # Calculando a média de salário do grupo
+    media_salario = soma_salarios / quantidade_habitantes
+    
+    # Exibindo os resultados
+    print("Média de salário do grupo:", media_salario)
+    print("Maior idade do grupo:", maior_idade)
+    print("Menor idade do grupo:", menor_idade)
+    print("Quantidade de mulheres com salário até R$100,00:", quantidade_mulheres_salario_ate_100)
+else:
+    print("Nenhum habitante inserido.")
+</script>

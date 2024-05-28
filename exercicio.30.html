@@ -1,0 +1,20 @@
+<script>
+    # Entrada do valor de N
+N = int(input("Digite um valor inteiro e positivo para N: "))
+
+# Inicializando variável para armazenar o valor de E
+E = 1
+
+# Loop externo para calcular a soma dos termos da série
+for i in range(1, N + 1):
+    fatorial = 1
+    # Loop interno para calcular o fatorial
+    for j in range(1, i + 1):
+        fatorial *= j
+    # Adicionando o termo atual à soma
+    E += 1 / fatorial
+
+# Exibindo o valor de E
+print("O valor de E é:", E)
+
+</script>

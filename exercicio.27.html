@@ -1,0 +1,27 @@
+<script>
+    # Inicializando variáveis
+maior_valor = float('-inf')
+menor_valor = float('inf')
+soma_valores = 0
+
+# Loop para entrada dos dados
+for i in range(500):
+    valor = int(input("Digite um valor inteiro e positivo: "))
+    
+    # Verificando maior e menor valor
+    if valor > maior_valor:
+        maior_valor = valor
+    if valor < menor_valor:
+        menor_valor = valor
+    
+    # Somando os valores para calcular a média
+    soma_valores += valor
+
+# Calculando a média
+media_valores = soma_valores / 500
+
+# Exibindo resultados
+print("Maior valor:", maior_valor)
+print("Menor valor:", menor_valor)
+print("Média dos valores:", media_valores)
+</script>

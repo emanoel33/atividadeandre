@@ -1,0 +1,17 @@
+<script>
+    # Função para calcular o fatorial de um número
+def fatorial(num):
+    if num == 0:
+        return 1
+    else:
+        return num * fatorial(num - 1)
+
+# Ler o valor de n
+n = int(input("Digite quantos valores deseja calcular o fatorial: "))
+
+# Loop para ler os valores e calcular o fatorial de cada um
+for i in range(n):
+    valor = int(input("Digite o próximo valor: "))
+    resultado_fatorial = fatorial(valor)
+    print("Fatorial de", valor, ":", resultado_fatorial)
+</script>

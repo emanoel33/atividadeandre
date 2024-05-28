@@ -1,0 +1,30 @@
+<script>
+# Loop para repetir a operação até que o código lido seja negativo
+while True:
+    # Ler o código do aluno
+    codigo_aluno = int(input("Digite o código do aluno (ou um número negativo para encerrar): "))
+    
+    # Verificar se o loop deve ser encerrado
+    if codigo_aluno < 0:
+        break
+    
+    # Ler as três notas do aluno
+    nota1 = float(input("Digite a primeira nota do aluno: "))
+    nota2 = float(input("Digite a segunda nota do aluno: "))
+    nota3 = float(input("Digite a terceira nota do aluno: "))
+    
+    # Calcular a média ponderada
+    maior_nota = max(nota1, nota2, nota3)
+    media_ponderada = (maior_nota * 4 + (nota1 + nota2 + nota3 - maior_nota) * 3) / 10
+    
+    # Imprimir o código do aluno, suas três notas e a média calculada
+    print("\nCódigo do aluno:", codigo_aluno)
+    print("Notas:", nota1, ",", nota2, ",", nota3)
+    print("Média ponderada:", media_ponderada)
+    
+    # Verificar se o aluno foi aprovado ou reprovado
+    if media_ponderada >= 5:
+        print("Situação: APROVADO\n")
+    else:
+        print("Situação: REPROVADO\n")
+</script>

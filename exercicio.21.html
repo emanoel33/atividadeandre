@@ -1,0 +1,19 @@
+<script>
+ def somatorio_numeros_negativos():
+    somatorio = 0
+    
+    while True:
+        numero = int(input("Digite um número (ou 0 para sair): "))
+        
+        if numero == 0:
+            break
+        
+        if numero < 0:
+            somatorio += numero
+    
+    return somatorio
+
+resultado = somatorio_numeros_negativos()
+print("O somatório dos números negativos é:", resultado)
+   
+</script>

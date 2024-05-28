@@ -1,0 +1,25 @@
+<script>
+    # Inicializando variáveis
+soma = 0
+contador = 0
+
+# Loop para entrada dos dados
+while True:
+    numero = int(input("Digite um número entre 13 e 73 (ou 0 para encerrar): "))
+    if numero == 0:
+        break
+    
+    if 13 <= numero <= 73:
+        soma += numero
+        contador += 1
+    else:
+        print("O número inserido não está entre 13 e 73. Tente novamente.")
+
+# Verificando se pelo menos um número foi inserido
+if contador > 0:
+    # Calculando a média aritmética
+    media = soma / contador
+    print("A média aritmética dos números lidos entre 13 e 73 é:", media)
+else:
+    print("Nenhum número válido foi inserido.")
+</script>

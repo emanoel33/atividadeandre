@@ -1,0 +1,33 @@
+<script>
+    # Inicializando variáveis
+soma_notas = 0
+contador_alunos = 0
+
+# Loop para ler as notas e calcular a média
+while True:
+    codigo_aluno = int(input("Digite o código do aluno (ou 0 para encerrar): "))
+    
+    # Verificar se o loop deve ser encerrado
+    if codigo_aluno == 0:
+        break
+    
+    # Ler as três notas do aluno
+    nota1 = float(input("Digite a primeira nota do aluno: "))
+    nota2 = float(input("Digite a segunda nota do aluno: "))
+    nota3 = float(input("Digite a terceira nota do aluno: "))
+    
+    # Calcular a média das notas do aluno
+    media_aluno = (nota1 + nota2 + nota3) / 3
+    
+    # Acumular a soma das médias e atualizar o contador de alunos
+    soma_notas += media_aluno
+    contador_alunos += 1
+
+# Verificar se pelo menos um aluno foi inserido
+if contador_alunos > 0:
+    # Calcular a média aritmética das médias dos alunos
+    media_classe = soma_notas / contador_alunos
+    print("A média aritmética das notas dos alunos é:", media_classe)
+else:
+    print("Nenhum aluno foi inserido.")
+</script>

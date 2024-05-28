@@ -1,0 +1,38 @@
+<script>
+    # Inicializando contadores para cada tipo de voto
+votos_candidatos = [0, 0, 0, 0]  # Índice 0 representa o candidato 1, índice 1 representa o candidato 2, e assim por diante
+votos_nulos = 0
+votos_em_branco = 0
+
+# Loop para ler os votos até que um valor negativo seja inserido
+while True:
+    voto = int(input("Digite o código do voto (ou um número negativo para encerrar): "))
+
+    # Verificar se o loop deve ser encerrado
+    if voto < 0:
+        break
+
+    # Contabilizar o voto
+    if voto == 1:
+        votos_candidatos[0] += 1
+    elif voto == 2:
+        votos_candidatos[1] += 1
+    elif voto == 3:
+        votos_candidatos[2] += 1
+    elif voto == 4:
+        votos_candidatos[3] += 1
+    elif voto == 5:
+        votos_nulos += 1
+    elif voto == 6:
+        votos_em_branco += 1
+    else:
+        print("Código de voto inválido.")
+
+# Imprimir os resultados
+print("Total de votos para cada candidato:")
+for i in range(4):
+    print("Candidato", i+1, ":", votos_candidatos[i])
+
+print("Total de votos nulos:", votos_nulos)
+print("Total de votos em branco:", votos_em_branco)
+</script>

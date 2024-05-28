@@ -1,0 +1,54 @@
+<script>
+    # Inicializando variáveis
+soma_salarios = 0
+soma_filhos = 0
+contador_habitantes = 0
+maior_salario = float('-inf')
+contador_salario_ate_100 = 0
+
+# Loop para ler os dados dos habitantes
+while True:
+    salario = float(input("Digite o salário (digite um valor negativo para terminar): "))
+    
+    # Verificar se o loop deve ser encerrado
+    if salario < 0:
+        break
+    
+    # Atualizar estatísticas
+    soma_salarios += salario
+    numero_filhos = int(input("Digite o número de filhos: "))
+    soma_filhos += numero_filhos
+    contador_habitantes += 1
+    
+    # Verificar o maior salário
+    if salario > maior_salario:
+        maior_salario = salario
+    
+    # Verificar se o salário é até R$100,00
+    if salario <= 100:
+        contador_salario_ate_100 += 1
+
+# Calcular média do salário
+if contador_habitantes > 0:
+    media_salario = soma_salarios / contador_habitantes
+else:
+    media_salario = 0
+
+# Calcular média do número de filhos
+if contador_habitantes > 0:
+    media_filhos = soma_filhos / contador_habitantes
+else:
+    media_filhos = 0
+
+# Calcular percentual de pessoas com salário até R$100,00
+if contador_habitantes > 0:
+    percentual_salario_ate_100 = (contador_salario_ate_100 / contador_habitantes) * 100
+else:
+    percentual_salario_ate_100 = 0
+
+# Imprimir resultados
+print("a) Média do salário da população:", media_salario)
+print("b) Média do número de filhos:", media_filhos)
+print("c) Maior salário:", maior_salario)
+print("d) Percentual de pessoas com salário até R$100,00:", percentual_salario_ate_100, "%")
+</script>
